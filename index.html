@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bé tập tính</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+ 
+    <div class="box_contain">
+
+        <div class="title">
+            Bé tập tính
+        </div>
+    
+       
+            <form class="input row" id = "form" >
+
+              <div class="input_number col-8">
+                <div class="form-group row">
+                  <label for="formGroupExampleInput" class="col-4">Số thứ nhất</label>
+                  <input type="text" class="form-control col-8" id="formInput1" autocomplete="off">
+                </div>
+                <div class="form-group row">
+                  <label for="formGroupExampleInput2 " class="col-4">Số thứ hai</label>
+                  <input type="text" class="form-control col-8" id="formInput2" autocomplete="off">
+                </div>
+
+                <div class="form-group row">
+                  <label for="formGroupExampleInput2 " class="col-4">Kết quả</label>
+                  <input type="text" class="form-control col-8" id="formResult" disabled>
+                </div>
+
+              </div> 
+
+                <div class="input_operator col-4">
+                  <div class="check row">
+                    <div class="form-check form-check-inline col-6">
+                        <input class="form-check-input" type="radio" name="operator" id="add" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Cộng</label>
+                      </div>
+                      <div class="form-check form-check-inline col-6">
+                        <input class="form-check-input" type="radio" name="operator" id="sub" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Trừ</label>
+                      </div>
+                      <div class="form-check form-check-inline col-6">
+                        <input class="form-check-input" type="radio" name="operator" id="mul" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Nhân</label>
+                      </div>
+                      <div class="form-check form-check-inline col-6">
+                        <input class="form-check-input" type="radio" name="operator" id="div" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Chia</label>
+                      </div>
+                </div>
+                    <button type="button" class="btn btn-primary"  id="btn_solve" onclick = "solve()">Tính</button>
+                </div>
+              </form>
+              
+              
+        
+        
+        <div class="notification">
+          <span>Thông báo: </span> 
+          <span id = "notification"></span>
+        </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="solve.js"></script>
+</body>
+</html>
