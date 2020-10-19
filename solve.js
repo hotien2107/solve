@@ -4,15 +4,18 @@ function checkNumberInput1()
 
     if(formInput1 == '')
     {
-        notification.innerHTML = "<span style = 'margin-left:42px; color: #d7385e; '>Chưa nhập </span>";
+        notification.innerHTML = "<span style = 'margin-left: 2rem; color: #d7385e; '>Chưa nhập </span>";
         notification.innerHTML += "<span style='color: #d7385e; font-style: italic; font-weight: bold; '>số thứ nhất</span>";     
     }
     else if(isNaN(formInput1) === true)
     {
-        notification.innerHTML = "<span style='margin-left:42px; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ nhất </span>";
+        notification.innerHTML = "<span style='margin-left:2rem; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ nhất </span>";
         notification.innerHTML += "<span style = 'color: #d7385e;'>không hợp lệ</span>";
     }
-
+    else
+    {
+        notification.innerHTML = "";
+    }
 }
 
 function checkNumberInput2()
@@ -21,13 +24,17 @@ function checkNumberInput2()
 
     if(formInput2 == '')
     {
-        notification.innerHTML = "<span style = 'margin-left:42px; color: #d7385e;'>Chưa nhập </span>";
+        notification.innerHTML = "<span style = 'margin-left:2rem; color: #d7385e;'>Chưa nhập </span>";
         notification.innerHTML += "<span style='color: #d7385e; font-style: italic; font-weight: bold; '>số thứ hai</span>";
     }
     else if(isNaN(formInput2) === true)
     {
-        notification.innerHTML = "<span style='margin-left:42px; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ hai </span>";
+        notification.innerHTML = "<span style='margin-left:2rem; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ hai </span>";
         notification.innerHTML += "<span style = 'color: #d7385e;'>không hợp lệ</span>";
+    }
+    else
+    {
+        notification.innerHTML = "";
     }
 }
 
@@ -47,31 +54,31 @@ function solve()
     var notification = document.getElementById("notification");
     if(formInput1 == '')
     {
-        notification.innerHTML = "<span style = 'margin-left:42px; color: #d7385e; '>Chưa nhập </span>";
+        notification.innerHTML = "<span style = 'margin-left:2rem; color: #d7385e; '>Chưa nhập </span>";
         notification.innerHTML += "<span style='color: #d7385e; font-style: italic; font-weight: bold; '>số thứ nhất</span>";
         formResult.value = ""; 
     }
     else if(isNaN(formInput1) === true)
     {
-        notification.innerHTML = "<span style='margin-left:42px; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ nhất </span>";
+        notification.innerHTML = "<span style='margin-left:2rem; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ nhất </span>";
         notification.innerHTML += "<span style = 'color: #d7385e;'>không hợp lệ</span>";
         formResult.value = ""; 
     }
     else if(formInput2 == '')
     {
-        notification.innerHTML = "<span style = 'margin-left:42px; color: #d7385e;'>Chưa nhập </span>";
+        notification.innerHTML = "<span style = 'margin-left:2rem; color: #d7385e;'>Chưa nhập </span>";
         notification.innerHTML += "<span style='color: #d7385e; font-style: italic; font-weight: bold; '>số thứ hai</span>";
         formResult.value = ""; 
     }
     else if(isNaN(formInput2) === true)
     {
-        notification.innerHTML = "<span style='margin-left:42px; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ hai </span>";
+        notification.innerHTML = "<span style='margin-left:2rem; color: #d7385e; font-style: italic; font-weight: bold; '>Số thứ hai </span>";
         notification.innerHTML += "<span style = 'color: #d7385e;'>không hợp lệ</span>";
         formResult.value = ""; 
     }
     else if(add.checked === false && sub.checked === false && mul.checked === false && div.checked === false)
     {
-        notification.innerHTML = "<span style = 'margin-left:42px; color: #d7385e;'>Chưa nhập </span>";
+        notification.innerHTML = "<span style = 'margin-left:2rem; color: #d7385e;'>Chưa nhập </span>";
         notification.innerHTML += "<span style='color: #d7385e; font-style: italic; font-weight: bold; '>phép tính</span>";
         formResult.value = "";
     }
